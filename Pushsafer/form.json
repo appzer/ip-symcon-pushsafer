@@ -1,0 +1,14 @@
+{
+    "elements":
+    [
+        { "type": "ValidationTextBox", "name": "privatekey", "caption": "Private or Alias Key" },
+		{ "type": "ValidationTextBox", "name": "title", "caption": "Notification title" },
+        { "type": "ValidationTextBox", "name": "device", "caption": "Device ID or Device Group ID" },
+		{ "type": "ValidationTextBox", "name": "icon", "caption": "Icon ID (optional, 1-98)" },
+		{ "type": "ValidationTextBox", "name": "sound", "caption": "Sound ID (optional, 0-28)" },
+		{ "type": "ValidationTextBox", "name": "vibration", "caption": "Vibration (optional, 0-3)" },
+		{ "type": "ValidationTextBox", "name": "time2live", "caption": "Integer number 0-43200, time in minutes, after the message automatically gets purged. (optional)" },
+		{ "type": "ValidationTextBox", "name": "url", "caption": "URL, Link (optional)" },
+		{ "type": "ValidationTextBox", "name": "urltitle", "caption": "URLs title (optional)" },
+    ]
+}
