@@ -1,0 +1,14 @@
+{
+	"id": "{eacb5188-528c-4fb3-ae3d-f7d6845b6ccb}",
+	"name": "Pushsafer",
+	"type": 3,
+	"vendor": "",
+	"aliases": 
+	[
+		"Pushsafer"
+	],
+	"parentRequirements": [],
+	"childRequirements": [],
+	"implemented": [],
+	"prefix": "Pushsafer"
+}
