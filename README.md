@@ -26,6 +26,7 @@ Pushsafer plugin for IP-Symcon
 ### Pushsafer API values
 
 The following parameters you can modify, further informations you will find on https://www.pushsafer.com/en/pushapi
+
 1. Private or Alias Key (required)
 2. Title
 3. Device
