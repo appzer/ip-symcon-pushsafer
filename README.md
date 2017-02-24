@@ -19,6 +19,10 @@ Pushsafer plugin for IP-Symcon (Version: 1.1.5)
 
 ![Pushsafer](https://www.pushsafer.com/de/assets/examples/ip-symcon-01.jpg)
 
+### Configuration
+
+![Pushsafer](https://www.pushsafer.com/de/assets/examples/ip-symcon-02.jpg)
+
 ### Repository-URL
 
 	git://github.com/appzer/ip-symcon-pushsafer.git
