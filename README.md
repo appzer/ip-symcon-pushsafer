@@ -1,6 +1,6 @@
 ![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png)
 # ip-symcon-pushsafer
-Pushsafer plugin for IP-Symcon
+Pushsafer plugin for IP-Symcon (Version: 1.1.5)
 
 ##How to send push-notification out of IP-Symcon with Pushsafer
 
