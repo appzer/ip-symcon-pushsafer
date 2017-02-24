@@ -39,7 +39,7 @@
 		CURLOPT_SSL_VERIFYPEER => false,
 		CURLOPT_RETURNTRANSFER => true,
 		CURLOPT_HEADER => true,
-		CURLOPT_HTTPHEADER => array('Content-type: application/x-www-form-urlencoded'),
+		//CURLOPT_HTTPHEADER => array('Content-type: application/x-www-form-urlencoded'),
 		CURLOPT_POSTFIELDS => $POST_Para,
 	    ));
 			
