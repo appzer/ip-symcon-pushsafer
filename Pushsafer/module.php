@@ -71,11 +71,7 @@ class Pushsafer extends IPSModule
 			IPS_LogMessage("Pushsafer", "Connection Error!");
 		} else {
 			$result = json_decode($response, 1);
-			(isset($result['success'])) ? $success = $result['success'] : $success = null;
-			(isset($result['status'])) ? $status = $result['status'] : $status = null;
-			(isset($result['available'])) ? $available = $result['available'] : $available = null;
-			//echo $success." : ".$status." : ".$available;
-			IPS_LogMessage("Pushsafer", "Send : ".$success." : ".$status." : ".$available);
+			IPS_LogMessage("Pushsafer", "Send : ".$result['success']." : ".$result['status']." : ".$result['available']);
 		}		
 	}
 }
