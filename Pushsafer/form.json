@@ -3,13 +3,20 @@
     [
         { "type": "ValidationTextBox", "name": "privatekey", "caption": "Private or Alias Key" },
 	{ "type": "ValidationTextBox", "name": "title", "caption": "Notification title" },
-        { "type": "ValidationTextBox", "name": "device", "caption": "Device ID or Device Group ID" },
-	{ "type": "ValidationTextBox", "name": "icon", "caption": "Icon ID (optional, 1-98)" },
-	{ "type": "ValidationTextBox", "name": "sound", "caption": "Sound ID (optional, 0-28)" },
-	{ "type": "ValidationTextBox", "name": "vibration", "caption": "Vibration (optional, 0-3)" },
-	{ "type": "ValidationTextBox", "name": "time2live", "caption": "Integer number 0-43200, time in minutes, after the message automatically gets purged. (optional)" },
-	{ "type": "ValidationTextBox", "name": "url", "caption": "URL, Link (optional)" },
-	{ "type": "ValidationTextBox", "name": "urltitle", "caption": "URLs title (optional)" },
+        { "type": "ValidationTextBox", "name": "device", "caption": "Device / Group ID" },
+	{ "type": "ValidationTextBox", "name": "icon", "caption": "Icon (1-98)" },
+	{ "type": "ValidationTextBox", "name": "sound", "caption": "Sound (0-28)" },
+	{ "type": "ValidationTextBox", "name": "vibration", "caption": "Vibration (0-3)" },
+	{ "type": "ValidationTextBox", "name": "time2live", "caption": "Time2Live (0-43200)" },
+	{ "type": "ValidationTextBox", "name": "url", "caption": "URL" },
+	{ "type": "ValidationTextBox", "name": "urltitle", "caption": "URLs title" },
+	{ "type": "Label", "label": "Images: Absolute paths to images" },
+	{ "type": "Label", "label": "Example 1: http://username:password@192.168.2.28:8080/snapshot.cgi" },
+	{ "type": "Label", "label": "Example 2: https://www.pushsafer.com/de/assets/logos/logo.png" },
+	{ "type": "ValidationTextBox", "name": "image1", "caption": "Image1 URL" },
+	{ "type": "ValidationTextBox", "name": "image2", "caption": "Image2 URL" },
+	{ "type": "ValidationTextBox", "name": "image3", "caption": "Image3 URL" },
+	{ "type": "Label", "label": "Pushsafer.com API description: https://www.pushsafer.com/en/pushapi" }
     ],
     "actions":
     [

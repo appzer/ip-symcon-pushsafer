@@ -11,6 +11,9 @@ class Pushsafer extends IPSModule
 	private $time2live = "";
 	private $url = "";
 	private $urltitle = "";
+	private $image1 = "";
+	private $image2 = "";
+	private $image3 = "";
 	    
 	public function Create()
 	{
@@ -29,6 +32,9 @@ class Pushsafer extends IPSModule
 		$this->RegisterPropertyString("time2live", "0");
 		$this->RegisterPropertyString("url", "https://www.pushsafer.com");
 		$this->RegisterPropertyString("urltitle", "Open Pushsafer.com");
+		$this->RegisterPropertyString("image1", "");
+		$this->RegisterPropertyString("image2", "");
+		$this->RegisterPropertyString("image3", "");
    	}
 	
 	public function ApplyChanges() 
@@ -46,6 +52,37 @@ class Pushsafer extends IPSModule
 
 	public function SendMessage(string $message) 
 	{
+		if(IPS_GetProperty($this->InstanceID,"image1")!=''){
+			$image1 = file_get_contents(IPS_GetProperty($this->InstanceID,"image1"));
+			if ($image1 !== false){
+				$imgtype1 = strtolower(substr(IPS_GetProperty($this->InstanceID,"image1"), -3));
+				if($imgtype1!='jpg' && $imgtype1!='png' && $imgtype1!='gif'){
+					$imgtype1='jpg';
+				}
+				$image1 = 'data:image/'.$imgtype1.';base64,'.base64_encode($image1);
+			}
+		}
+		if(IPS_GetProperty($this->InstanceID,"image2")!=''){
+			$image2 = file_get_contents(IPS_GetProperty($this->InstanceID,"image2"));
+			if ($image2 !== false){
+				$imgtype2 = strtolower(substr(IPS_GetProperty($this->InstanceID,"image2"), -3));
+				if($imgtype2!='jpg' && $imgtype2!='png' && $imgtype2!='gif'){
+					$imgtype2='jpg';
+				}			
+				$image2 = 'data:image/'.$imgtype2.';base64,'.base64_encode($image2);
+			}
+		}
+		if(IPS_GetProperty($this->InstanceID,"image3")!=''){
+			$image3 = file_get_contents(IPS_GetProperty($this->InstanceID,"image3"));
+			if ($image3 !== false){
+				$imgtype3 = strtolower(substr(IPS_GetProperty($this->InstanceID,"image3"), -3));
+				if($imgtype3!='jpg' && $imgtype3!='png' && $imgtype3!='gif'){
+					$imgtype3='jpg';
+				}			
+				$image3 = 'data:image/'.$imgtype3.';base64,'.base64_encode($image3);
+			}
+		}
+	
 		@curl_setopt_array($ch = curl_init(), array(
 			CURLOPT_URL => "https://www.pushsafer.com/api",
 			CURLOPT_POSTFIELDS => array(
@@ -58,6 +95,9 @@ class Pushsafer extends IPSModule
 				"l" => IPS_GetProperty($this->InstanceID,"time2live"),
 				"u" => IPS_GetProperty($this->InstanceID,"url"),
 				"ut" => IPS_GetProperty($this->InstanceID,"urltitle"),
+				"p" => $image1,
+				"p2" => $image2,
+				"p3" => $image3,
 				"m" => $message
 			),
 			CURLOPT_SAFE_UPLOAD => true,
