@@ -15,7 +15,7 @@ class Pushsafer extends IPSModule
 	public function Create()
 	{
 		//Never delete this line!
-        	parent::Create();
+        parent::Create();
 		
 		//These lines are parsed on Symcon Startup or Instance creation
 		//You cannot use variables here. Just static values.
@@ -33,17 +33,17 @@ class Pushsafer extends IPSModule
 	
 	public function ApplyChanges() 
 	{
-        	// Diese Zeile nicht löschen
-        	parent::ApplyChanges();
+        // Diese Zeile nicht löschen
+        parent::ApplyChanges();
 	}
-	
 	########## private functions ##########
 	public function TestMessage() 
 	{	
 		$this->SendMessage("Test");
 	}
-	
 	########## public functions ##########
+
+
 	public function SendMessage(string $message) 
 	{
 		@curl_setopt_array($ch = curl_init(), array(
@@ -70,10 +70,7 @@ class Pushsafer extends IPSModule
 		if($response === false) {
 			IPS_LogMessage("Pushsafer", "Connection Error!");
 		} else {
-			list($header, $body) = explode("\r\n\r\n", $response, 2);
-			//echo $header."\r\n";
-			//echo "**".$body."**\r\n";
-			$result = json_decode($body, 1);
+			$result = json_decode($response, 1);
 			(isset($result['success'])) ? $success = $result['success'] : $success = null;
 			(isset($result['status'])) ? $status = $result['status'] : $status = null;
 			(isset($result['available'])) ? $available = $result['available'] : $available = null;
