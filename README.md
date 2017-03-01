@@ -17,15 +17,15 @@ Pushsafer plugin for IP-Symcon (Version: 1.1.5)
 4. enter the Respository-URL (git://github.com/appzer/ip-symcon-pushsafer.git)
 5. Press OK
 
+### Repository-URL
+
+	git://github.com/appzer/ip-symcon-pushsafer.git
+
 ![Pushsafer](https://www.pushsafer.com/de/assets/examples/ip-symcon-01.jpg)
 
 ### Configuration
 
 ![Pushsafer](https://www.pushsafer.com/de/assets/examples/ip-symcon-02.jpg)
-
-### Repository-URL
-
-	git://github.com/appzer/ip-symcon-pushsafer.git
 
 ### Pushsafer API values
 
@@ -48,3 +48,13 @@ The following parameters you can modify, further informations you will find on h
 Example 1: http://username:password@192.168.2.28:8080/snapshot.cgi
 
 Example 2: https://www.pushsafer.com/de/assets/logos/logo.png
+
+### More Pushsafer objects
+
+You can create as many Pushsafer objects as you want. So you have the possibility to use different Pushsafer settings for different scenarios.
+
+![Pushsafer](https://www.pushsafer.com/de/assets/examples/ip-symcon-03.jpg)
+
+### Send notifications by script
+
+	$sendMessage = Pushsafer_SendMessage($ObjectIDofPushsaferModul, "Message");
