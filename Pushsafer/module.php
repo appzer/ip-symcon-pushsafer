@@ -9,6 +9,10 @@ class Pushsafer extends IPSModule
 	private $sound = "";
 	private $vibration = "";
 	private $time2live = "";
+	private $priority = "";
+	private $retry = "";
+	private $expire = "";
+	private $answer = "";
 	private $url = "";
 	private $urltitle = "";
 	private $image1 = "";
@@ -30,6 +34,10 @@ class Pushsafer extends IPSModule
 		$this->RegisterPropertyString("sound", "1");
 		$this->RegisterPropertyString("vibration", "3");
 		$this->RegisterPropertyString("time2live", "0");
+		$this->RegisterPropertyString("priority", "0");
+		$this->RegisterPropertyString("retry", "");
+		$this->RegisterPropertyString("expire", "");
+		$this->RegisterPropertyString("answer", "");
 		$this->RegisterPropertyString("url", "https://www.pushsafer.com");
 		$this->RegisterPropertyString("urltitle", "Open Pushsafer.com");
 		$this->RegisterPropertyString("image1", "");
@@ -93,6 +101,10 @@ class Pushsafer extends IPSModule
 				"s" => IPS_GetProperty($this->InstanceID,"sound"),
 				"v" => IPS_GetProperty($this->InstanceID,"vibration"),
 				"l" => IPS_GetProperty($this->InstanceID,"time2live"),
+				"pr" => IPS_GetProperty($this->InstanceID,"priority"),
+				"re" => IPS_GetProperty($this->InstanceID,"retry"),
+				"ex" => IPS_GetProperty($this->InstanceID,"expire"),
+				"a" => IPS_GetProperty($this->InstanceID,"answer"),
 				"u" => IPS_GetProperty($this->InstanceID,"url"),
 				"ut" => IPS_GetProperty($this->InstanceID,"urltitle"),
 				"p" => $image1,
