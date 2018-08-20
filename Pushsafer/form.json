@@ -2,9 +2,9 @@
     "elements":
     [
         { "type": "ValidationTextBox", "name": "privatekey", "caption": "Private or Alias Key" },
-	{ "type": "ValidationTextBox", "name": "title", "caption": "Notification title" },
+        { "type": "ValidationTextBox", "name": "title", "caption": "Notification title" },
         { "type": "ValidationTextBox", "name": "device", "caption": "Device / Group ID" },
-	{ "type": "ValidationTextBox", "name": "icon", "caption": "Icon (1-98)" },
+        { "type": "ValidationTextBox", "name": "icon", "caption": "Icon (1-98)" },
 	{ "type": "ValidationTextBox", "name": "sound", "caption": "Sound (0-28)" },
 	{ "type": "ValidationTextBox", "name": "vibration", "caption": "Vibration (0-3)" },
 	{ "type": "ValidationTextBox", "name": "time2live", "caption": "Time2Live (0-43200)" },
