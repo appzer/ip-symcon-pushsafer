@@ -1,6 +1,6 @@
 ![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png)
 # ip-symcon-pushsafer
-Pushsafer plugin for IP-Symcon (Version: 1.1.5)
+Pushsafer plugin for IP-Symcon (Version: 1.1.6)
 
 ##How to send push-notification out of IP-Symcon with Pushsafer
 
@@ -40,9 +40,13 @@ The following parameters you can modify, further informations you will find on h
 7. Time2Live = Integer number 0-43200: Time in minutes, after which message automatically gets purged. (optional)
 8. URL = URL/Link or URL scheme (optional)
 9. URL Title = Title of URL (optional)
-10. Image URL 1 = absolute image path (optional)
-11. Image URL 2 = absolute image path (optional)
-12. Image URL 3 = absolute image path (optional)
+10. Priority = set the priority, -2, -1, 0, 1, 2 (optional)
+11. Retry = resend a notification after set time in seconds, 60-10800 (optional)
+12. Expire = when the retry/resend should stop, time in seconds, 60-10800 (optional)
+13. Answer = 1=Answer, 0 or blank no answer possibility (optional)
+14. Image URL 1 = absolute image path (optional)
+15. Image URL 2 = absolute image path (optional)
+16. Image URL 3 = absolute image path (optional)
 
 ### For image URLs use absolute paths.
 Example 1: http://username:password@192.168.2.28:8080/snapshot.cgi
