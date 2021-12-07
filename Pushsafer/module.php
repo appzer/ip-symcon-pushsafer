@@ -12,6 +12,7 @@ class Pushsafer extends IPSModule
 	private $priority = "";
 	private $retry = "";
 	private $expire = "";
+	private $confirm = "";
 	private $answer = "";
 	private $url = "";
 	private $urltitle = "";
@@ -37,6 +38,7 @@ class Pushsafer extends IPSModule
 		$this->RegisterPropertyString("priority", "0");
 		$this->RegisterPropertyString("retry", "");
 		$this->RegisterPropertyString("expire", "");
+		$this->RegisterPropertyString("confirm", "");
 		$this->RegisterPropertyString("answer", "");
 		$this->RegisterPropertyString("url", "https://www.pushsafer.com");
 		$this->RegisterPropertyString("urltitle", "Open Pushsafer.com");
@@ -104,6 +106,7 @@ class Pushsafer extends IPSModule
 				"pr" => IPS_GetProperty($this->InstanceID,"priority"),
 				"re" => IPS_GetProperty($this->InstanceID,"retry"),
 				"ex" => IPS_GetProperty($this->InstanceID,"expire"),
+				"cr" => IPS_GetProperty($this->InstanceID,"confirm"),
 				"a" => IPS_GetProperty($this->InstanceID,"answer"),
 				"u" => IPS_GetProperty($this->InstanceID,"url"),
 				"ut" => IPS_GetProperty($this->InstanceID,"urltitle"),
