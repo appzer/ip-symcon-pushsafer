@@ -14,6 +14,8 @@ class Pushsafer extends IPSModule
 	private $expire = "";
 	private $confirm = "";
 	private $answer = "";
+	private $answeroptions = "";
+	private $answerforce = "";
 	private $url = "";
 	private $urltitle = "";
 	private $image1 = "";
@@ -40,6 +42,8 @@ class Pushsafer extends IPSModule
 		$this->RegisterPropertyString("expire", "");
 		$this->RegisterPropertyString("confirm", "");
 		$this->RegisterPropertyString("answer", "");
+		$this->RegisterPropertyString("answeroptions", "");
+		$this->RegisterPropertyString("answerforce", "");
 		$this->RegisterPropertyString("url", "https://www.pushsafer.com");
 		$this->RegisterPropertyString("urltitle", "Open Pushsafer.com");
 		$this->RegisterPropertyString("image1", "");
@@ -108,6 +112,8 @@ class Pushsafer extends IPSModule
 				"ex" => IPS_GetProperty($this->InstanceID,"expire"),
 				"cr" => IPS_GetProperty($this->InstanceID,"confirm"),
 				"a" => IPS_GetProperty($this->InstanceID,"answer"),
+				"ao" => IPS_GetProperty($this->InstanceID,"answeroptions"),
+				"af" => IPS_GetProperty($this->InstanceID,"answerforce"),
 				"u" => IPS_GetProperty($this->InstanceID,"url"),
 				"ut" => IPS_GetProperty($this->InstanceID,"urltitle"),
 				"p" => $image1,
