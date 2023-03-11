@@ -13,6 +13,8 @@
 	{ "type": "ValidationTextBox", "name": "expire", "caption": "Expire (60-10800)" },
 	{ "type": "ValidationTextBox", "name": "confirm", "caption": "Confirm (10-10800)" },
 	{ "type": "ValidationTextBox", "name": "answer", "caption": "Answer (1 or 0)" },
+	{ "type": "ValidationTextBox", "name": "answeroptions", "caption": "Answer Options seperated by a PIPE character (e.g. yes|no|maybe)" },
+	{ "type": "ValidationTextBox", "name": "answerforce", "caption": "Force Answer (1 or 0)" },
 	{ "type": "ValidationTextBox", "name": "url", "caption": "URL" },
 	{ "type": "ValidationTextBox", "name": "urltitle", "caption": "URLs title" },
 	{ "type": "Label", "label": "Images: Absolute paths to images" },
